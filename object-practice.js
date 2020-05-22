@@ -3,7 +3,7 @@ let shapes = [circle, square, oval, rectangle];
 function setup(){
     createCanvas(windowWidth, windowHeight);
     init(shapes, 78);
-    console.log(cool);
+    console.log(cool[3].name);
     rotater(cool)
     //console.log(cool)
 };

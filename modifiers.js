@@ -2,18 +2,23 @@
 //Selectors
 //Param selectors and modifiers (maybe that will be in the shape object istelf)
 
-let cool = [];
+let cool;
 
 const init = (arr, qty) => {
     cool = Array(qty).fill().map((x,i) => 
-        arr[i % arr.length].render()
+        cool = arr[i % arr.length] //makes object instead of 'undefined'
     );
+
+    cool.forEach(i => {
+        i.render();      
+    });
+
     return cool;
 }
 
-let multiplier = () => {
-    console.log("Multiplied, baby!")
-}
+// let multiplier = () => {
+//     console.log("Multiplied, baby!")
+// }
 
 let rotater = (cool) => {
     console.log("You got a spin, mate")
