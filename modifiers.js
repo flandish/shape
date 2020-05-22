@@ -2,11 +2,20 @@
 //Selectors
 //Param selectors and modifiers (maybe that will be in the shape object istelf)
 
+let cool = [];
+
+const init = (arr, qty) => {
+    cool = Array(qty).fill().map((x,i) => 
+        arr[i % arr.length].render()
+    );
+    return cool;
+}
+
 let multiplier = () => {
     console.log("Multiplied, baby!")
 }
 
-let rotater = () => {
+let rotater = (cool) => {
     console.log("You got a spin, mate")
 }
 
@@ -20,15 +29,7 @@ let sizer = () => {
 //     size: 50,
 //     rotation: 3,
 // }
-let cool;
 
-
-let init = (arr, qty) => {
-    cool = Array(qty).fill().map((x,i) => 
-        arr[i % arr.length].render()
-    )
-    return cool;
-}
 
 const mods = {
     rotate: (cool) => {

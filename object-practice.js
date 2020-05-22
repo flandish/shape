@@ -2,14 +2,11 @@ let shapes = [circle, square, oval, rectangle];
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    init(shapes, 10);
-    console.log(cool)
+    init(shapes, 78);
+    console.log(cool);
+    rotater(cool)
+    //console.log(cool)
 };
-
-function draw(){
-    background(20,90,150)
-    //square.render();
-}
 
 //------
 //collection of shapes

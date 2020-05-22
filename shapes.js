@@ -1,11 +1,11 @@
-let square = {
+const square = {
     name: "square",
     render: () => {
-        rect(50, 50, 50, 50)
+        rect(random(0, windowWidth), random(0, windowHeight), 50, 50)
     }
 };
 
-let rectangle = {
+const rectangle = {
     name: "rectangle",
     render: () => {
         rect(random(0, windowWidth),
@@ -14,7 +14,7 @@ let rectangle = {
     }
 };
 
-let circle = {
+const circle = {
     name: "circle",
     render: () => {
         ellipse(
@@ -25,7 +25,7 @@ let circle = {
     }
 };
 
-let oval = {
+const oval = {
     name: "oval",
     render: () => {
         ellipse(random(0, windowWidth), random(0, windowHeight), 20,50)
