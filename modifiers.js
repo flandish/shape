@@ -1,31 +1,43 @@
 //Rotation, colour, scale, quantity, distribution
 //Selectors
 //Param selectors and modifiers (maybe that will be in the shape object istelf)
+
+let multiplier = () => {
+    console.log("Multiplied, baby!")
+}
+
+let rotater = () => {
+    console.log("You got a spin, mate")
+}
+
+let sizer = () => {
+    console.log("The size is different")
+}
+
+//----------------
+
+// let state = {
+//     size: 50,
+//     rotation: 3,
+// }
 let cool;
 
-let multiplier = (arr, qty) => {
+
+let init = (arr, qty) => {
     cool = Array(qty).fill().map((x,i) => 
         arr[i % arr.length].render()
     )
     return cool;
 }
+
 const mods = {
-    rotate: () => {
-        
+    rotate: (cool) => {
+        cool.map()
     }
 }
 
-let rotateMate = (cool, a) => {
-    cool.map(()=>rotate(a))
-    //cool.rotate(a);
-}
-
-let sizeWise = (arr, s) => {
-    arr.map(() => {
-        scale(s)
-    })
-}
-
 let colourPal = []
+
+let displayEm;
 
 // let endResult = 

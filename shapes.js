@@ -1,7 +1,7 @@
 let square = {
     name: "square",
     render: () => {
-        rect(random(0, windowWidth), random(0, windowHeight), 50,50)
+        rect(50, 50, 50, 50)
     }
 };
 

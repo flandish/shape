@@ -1,22 +1,15 @@
-let twoShapes = [circle, square, oval, rectangle];
+let shapes = [circle, square, oval, rectangle];
+
 function setup(){
     createCanvas(windowWidth, windowHeight);
-  
-    
-    multiplier(twoShapes,8)
-    rotateMate(cool, PI/3)
-    sizeWise(twoShapes,2)
-    //rotate(PI/3)
-  
-    //rotate(PI/3)
-    
-    //rotateMate(PI / 3, twoShapes);
-
-
-
-    //maybe they .render too soon
-
+    init(shapes, 10);
+    console.log(cool)
 };
+
+function draw(){
+    background(20,90,150)
+    //square.render();
+}
 
 //------
 //collection of shapes
