@@ -3,8 +3,12 @@ let shapes = [circle, square, oval, rectangle];
 function setup(){
     createCanvas(windowWidth, windowHeight);
     init(shapes, 78);
-    console.log(cool[3].name);
-    rotater(cool)
+
+    //rotater(cool, 4);
+    // sizer(cool);
+    //positioner(cool);
+
+    displayEm(cool);
     //console.log(cool)
 };
 

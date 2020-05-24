@@ -9,41 +9,47 @@ const init = (arr, qty) => {
         cool = arr[i % arr.length] //makes object instead of 'undefined'
     );
 
-    cool.forEach(i => {
-        i.render();      
-    });
+    
 
     return cool;
 }
 
-// let multiplier = () => {
-//     console.log("Multiplied, baby!")
-// }
-
-let rotater = (cool) => {
-    console.log("You got a spin, mate")
+let rotater = (cool, r) => {
+    cool.forEach(i => {
+        i.rotation = r;
+    });
+    console.log("Rotate, mate");
 }
 
-let sizer = () => {
-    console.log("The size is different")
+let sizer = (cool, s) => {
+    cool.forEach(i => {
+        i.size = s
+    });
+    console.log("The size is different");
 }
 
-//----------------
-
-// let state = {
-//     size: 50,
-//     rotation: 3,
-// }
-
-
-const mods = {
-    rotate: (cool) => {
-        cool.map()
-    }
+let positioner = (cool) => {
+    cool.forEach(i => {
+        i.posX = Math.floor(random(0, windowWidth));
+        i.posY = Math.floor(random(0, windowHeight));
+    });
 }
 
-let colourPal = []
+let displayEm = (cool) => {
 
-let displayEm;
+    rotater(cool, 3.2);
+    sizer(cool, 1);
 
-// let endResult = 
+    cool.forEach(i => {
+
+        positioner(cool);
+        scale(i.size);
+        rotate(i.rotation);
+
+        i.render();
+        
+    });
+    console.log(cool);
+};
+
+let colourPal = [];
