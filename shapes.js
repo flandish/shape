@@ -1,42 +1,46 @@
 // let state = {
 //     rotation: random()
 // }
-let state = {
-    rotation: 0,
-    size: 0,
-    posX: 0,
-    posY: 0
-}
+// let state = {
+//     rotation: 0,
+//     size: Math.random(),
+//     posX: 0,
+//     posY: 0
+//     // colour: color(100)
+// }
+
+const m = 50;
 
 const square = {
-    ...state,
     name: "square",
     render: () => {
-        rect(square.posX, square.posY, 50, 50);
+        push()
+        //fill(color(255,0,0));
+        // fill(square.colour);
+        rect(random(windowWidth), random(windowWidth), 50, 50);
+        pop()
     }
 };
 
 const rectangle = {
-    ...state,
     name: "rectangle",
     render: () => {
-        rect(rectangle.posX, rectangle.posY, 30, 50);
+        rect(random(windowWidth), random(windowWidth), 30, 50);
+        //console.log(rect.x)
     }
 };
 
 const circle = {
-    ...state,
     name: "circle",
     render: () => {
-        ellipse(
-            random(0, windowWidth), random(0, windowHeight), 50, 50);
+        ellipse(random(windowWidth), random(windowWidth), 50, 50);
     }
 };
 
 const oval = {
-    ...state,
+    
     name: "oval",
     render: () => {
-        ellipse(random(0, windowWidth), random(0, windowHeight), 20,50)
+        ellipse(random(windowWidth), random(windowWidth), 20,50)
     }
 };
